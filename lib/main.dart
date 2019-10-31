@@ -7,14 +7,33 @@ class GoodWelchi extends StatelessWidget{
   Widget build(BuildContext context){
     return MaterialApp(
       title:'GoodWelchi',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.lightGreen
+        primarySwatch: Colors.teal
       ),
-      home:Scaffold(
-        body:Center(
-          child: Text('Hello Flutter'),
-        )
-      )
+      home:HomePage()
+    );
+  }
+}
+
+class HomePage extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(colors: [
+          Color(0xFFF8FBFF),
+          Color(0xFFFCFDFD)
+        ])
+      ),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        body: SingleChildScrollView(
+          child:Column(
+            children: <Widget>[],
+          )
+      ),
+    ),
     );
   }
 }
