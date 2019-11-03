@@ -26,8 +26,26 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.transparent,
         body: SingleChildScrollView(
             child: Column(
-          children: <Widget>[NavBar()],
+          children: <Widget>[NavBar(), TopImage()],
         )),
+      ),
+    );
+  }
+}
+
+class TopImage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 45, vertical: 38),
+      child: Row(
+        children: <Widget>[
+          Expanded(
+              child: Container(
+                child: Image.network("assets/topimage.png"),
+              ),
+          )
+        ],
       ),
     );
   }
