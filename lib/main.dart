@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'widgets/navbar.dart';
+import 'utils/responsiveLayout.dart';
 
 void main() => runApp(GoodWelchi());
 
@@ -24,7 +26,7 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.transparent,
         body: SingleChildScrollView(
             child: Column(
-          children: <Widget>[],
+          children: <Widget>[NavBar()],
         )),
       ),
     );
